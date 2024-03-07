@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="COLA: Control and Optimization Language Architecture for Robotics">
+  <meta name="keywords" content="Robotic Manipulation, Language Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COLA</title>
+
+  <!-- TODO this has to be changed? -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV4ZJ9PVSV"></script>  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FV4ZJ9PVSV');
+  </script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">COLA: Control and Optimization<br>Language Architecture for Robotics</h1>
+          <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.corl2023.org/">IROS 2024</a></h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a target="_blank" href="https://seifismail.com/">Seif Ismail</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://twitter.com/arbwes">Antonio Arbues</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://rycolab.io/authors/ryan/">Ryan Cotterell</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://scholar.google.com/citations?user=feJr7REAAAAJ&hl=en">René Zurbrügg</a><sup>1, 2</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://camoalon.github.io/">Carmen Amo Alonso</a><sup>1, 2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>ETH Zürich,</span>
+            <span class="author-block"><sup>2</sup>ETH AI Center</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a target="_blank" href="cola.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+            <!-- Arxiv Link. -->
+            <span class="link-block">
+              <!-- TODO -->
+              <a target="_blank" href="https://arxiv.org/"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file"></i>
+                </span>
+                <span>ArXiv</span>
+              </a>
+            </span>
+
+            <!-- Video Link. -->
+            <span class="link-block">
+              <!-- TODO -->
+              <a target="_blank" href="https://youtu.be/"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                <span>Video</span>
+              </a>
+            </span>
+
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://github.com/vateseif/l2o"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code (Sim)</span>
+                </a>
+            </span>
+            <!-- ROS code link -->
+            <span class="link-block">
+              <a target="_blank" href="https://github.com/vateseif/l2c_sim"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code (ROS)</span>
+                </a>
+            </span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered  is-centered">
+          <video id="teaser" autoplay muted loop height="60%" width="60%">
+            <source src="media/videos/teaser.mp4"
+                    type="video/mp4">
+          </video>
+          </br>
+        </div>
+        <br>
+        <h2 class="subtitle has-text-centered">
+        <span class="dperact">COLA</span> solves long-horizon contact-rich tasks, generating a sequence of <b>sub-tasks in language space</b>, and formulating for each sub-task an <b>interpretable and safe constrained MPC program</b> to execute the action on the robot.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/clean-8x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+       <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/stacking-8x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/pyramid-8x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/l-8x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<h2 class="subtitle has-text-centered">
+</br>
+  COLA can <b>zero-shot synthesize</b> long-horizon plans spanning <b>dozens of steps</b> for contact-rich manipulation tasks requiring <b>a single high-level language instruction</b>.
+</h2>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The impressive capabilities of Large Language Models (LLMs) have led to various efforts to perform robotic control from natural language instructions. 
+            The goal is for the motor-control task to be performed accurately, efficiently and safely while also enjoying the flexibility imparted by LLMs to specify and adjust the task through natural language. 
+            In this work, we demonstrate how a careful layering of an LLM in combination with a Model Predictive Control (MPC) formulation allows for accurate, safe, and flexible robotic control via natural language. 
+            In particular, we rely on the LLM to effectively frame constraints and cost functions as mathematical expressions, according to the language instructions, which are later used in the motor-control module via MPC. 
+            The transparency of the optimization formulation allows for interpretability of the task and enables adjustments through human feedback. We demonstrate the validity of our method through extensive experiments on long-horizon reasoning, contact-rich, and multi-object interaction tasks. 
+            Our evaluations show that COLA outperforms current existing methods on these benchmarks and transfers to the real world on 2 different embodiments.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+
+  <!-- Paper video. -->
+  <br>
+  <br>
+
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Video</h2>
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/Yvn4eR05A3M"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+
+
+    <!-- Animation. -->
+    <div class="rows is-centered ">
+      <div class="row is-full-width">
+        <h2 class="title is-3"><span class="dperact">COLA</span></h2>
+
+        <!-- Interpolating. -->
+        <div class="content has-text-justified">
+        <!-- <br> -->
+        </div>
+        <img src="media/figures/method.png" class="interpolation-image" />
+        </br>
+        </br>
+          <p class="content has-text-justified">
+            The user provides a task in natural language <i>l</i>, which then gets translated into a series of steps (TP) and cost and constraints (OD) via two layered blocks of a language model in the language module. The cost and constraints <i>c</i>,<i>h</i>,<i>g</i> are then used as inputs to the control module, which generates a trajectory via MPC (TG) and the low-level controls (TT) to be applied to the system, in this case, a robotic arm.
+          </p>
+        </br>
+        </br>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Efficiency Evaluation</h2>
+      
+      <p class="content has-text-justified">
+        We compare COLA against <a href="https://code-as-policies.github.io/">Code as Policies</a>, and <a href="https://voxposer.github.io/">VoxPoser</a>. We find that defining the constrained MPC program leads to 
+        the most efficient execution of contact-rich tasks (where the cm-level trajectories of the gripper fingers matter for collision avoidance).
+      </p>
+      <br>
+    </div>
+
+    <div class="columns">
+      <div class="column has-text-centered">
+        <img id="dist1" src="media/figures/tmp-efficiency.jpeg" class="interpolation-image" style="width: 100%; height: auto;"/>
+        <p style="text-align:center">
+          Ours
+        </p>
+      </div>
+  
+      <div class="column has-text-centered">
+        <img id="dist2" src="media/figures/tmp-efficiency.jpeg" class="interpolation-image" style="width: 100%; height: auto;"/>
+        <p style="text-align:center">
+          Code as Policies
+        </p>
+      </div>
+
+      <div class="column has-text-centered">
+        <img id="dist3" src="media/figures/tmp-efficiency.jpeg" class="interpolation-image" style="width: 100%; height: auto;"/>
+        <p style="text-align:center">
+          VoxPoser
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Human Feedback at Runtime</h2>
+      
+      <p class="content has-text-justified">
+        COLA defines each sub-task in natural language. This allows for <b>seamless human intervention</b> in case the subtasks are incorrect. We show that being able to intervene with feedback (on both 1 sub-task, or for every sub-task of the plan) increases the success rate.
+      </p>
+      <br>
+      <div class="column has-text-centered">
+        <img id="dist1" src="media/figures/feedback.png" class="interpolation-image" style="width: 60%; height: auto;"/>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Deployment on a Different Embodiment</h2>
+      
+      <p class="content has-text-justified">
+        Despite using a Model Predictive Controller (MPC), COLA is <b>immediately deployable on any hardware embodiment</b> as it plans in End Effector space, and uses a point-mass model.
+      </p>
+      <div class="column has-text-centered">
+        <video id="dist1"
+          controls
+          muted
+          autoplay
+          loop
+          width="70%">
+          <source src="media/videos/dynaarm-pyramid-8x.mp4" 
+          type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+  <div class="row">
+    <h2 class="title is-3">
+      Prompts
+    </h2>
+    <p class="content has-text-justified">
+        All the prompts are the same in simulation and real-world deployment:
+        <br>
+        <a href="prompts/prompt_TP.txt">Task Planner</a> |
+        <a href="prompts/prompt_OD.txt">Optimization Designer</a> |
+        <a href="prompts/prompt_TP_coll.txt">Task Planner (Collaborative)</a> |
+        <a href="prompts/prompt_OD_coll.txt">Optimization Designer (Collaborative)</a>
+    </p>
+  </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{huang2023voxposer,
+      title={VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models},
+      author={Huang, Wenlong and Wang, Chen and Zhang, Ruohan and Li, Yunzhu and Wu, Jiajun and Fei-Fei, Li},
+      journal={arXiv preprint arXiv:2307.05973},
+      year={2023}
+    }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>, <a href="https://peract.github.io/">PerAct</a>, and <a href="https://voxposer.github.io/">Voxposer</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

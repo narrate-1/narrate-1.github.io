@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="COLA: Control and Optimization Language Architecture for Robotics">
+        content="NARRATE: Control and Optimization Language Architecture for Robotics">
   <meta name="keywords" content="Robotic Manipulation, Language Models">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>COLA</title>
+  <title>NARRATE</title>
 
   <!-- TODO this has to be changed? -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV4ZJ9PVSV"></script>  
@@ -42,8 +42,8 @@
     <div class="container is-fullhd">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">COLA: Control and Optimization<br>Language Architecture for Robotics</h1>
-          <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.corl2023.org/">IROS 2024</a></h3>
+          <h1 class="title is-1 publication-title">NARRATE: Control and Optimization<br>Language Architecture for Robotics</h1>
+          <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.corl2023.org/">IROS 2024</a></h3> -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a target="_blank" href="https://seifismail.com/">Seif Ismail</a><sup>1</sup>,
@@ -52,7 +52,7 @@
               <a target="_blank" href="https://twitter.com/arbwes">Antonio Arbues</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="https://rycolab.io/authors/ryan/">Ryan Cotterell</a><sup>1</sup>,
+              <a target="_blank" href="https://ryNARRATEb.io/authors/ryan/">Ryan Cotterell</a><sup>1</sup>,
             </span>
             <span class="author-block">
               <a target="_blank" href="https://scholar.google.com/citations?user=feJr7REAAAAJ&hl=en">René Zurbrügg</a><sup>1, 2</sup>,
@@ -71,7 +71,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a target="_blank" href="cola.pdf"
+                <a target="_blank" href="NARRATE.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -145,7 +145,7 @@
         </div>
         <br>
         <h2 class="subtitle has-text-centered">
-        <span class="dperact">COLA</span> solves long-horizon contact-rich tasks, generating a sequence of <b>sub-tasks in language space</b>, and formulating for each sub-task an <b>interpretable and safe constrained MPC program</b> to execute the action on the robot.
+        <span class="dperact">NARRATE</span> solves long-horizon contact-rich tasks, generating a sequence of <b>sub-tasks in language space</b>, and formulating for each sub-task an <b>interpretable and safe constrained MPC program</b> to execute the action on the robot.
         </h2>
       </div>
     </div>
@@ -188,7 +188,7 @@
 </section>
 <h2 class="subtitle has-text-centered">
 </br>
-  COLA can <b>zero-shot synthesize</b> long-horizon plans spanning <b>dozens of steps</b> for contact-rich manipulation tasks requiring <b>a single high-level language instruction</b>.
+  NARRATE can <b>zero-shot synthesize</b> long-horizon plans spanning <b>dozens of steps</b> for contact-rich manipulation tasks requiring <b>a single high-level language instruction</b>.
 </h2>
 
 
@@ -205,7 +205,7 @@
             In this work, we demonstrate how a careful layering of an LLM in combination with a Model Predictive Control (MPC) formulation allows for accurate, safe, and flexible robotic control via natural language. 
             In particular, we rely on the LLM to effectively frame constraints and cost functions as mathematical expressions, according to the language instructions, which are later used in the motor-control module via MPC. 
             The transparency of the optimization formulation allows for interpretability of the task and enables adjustments through human feedback. We demonstrate the validity of our method through extensive experiments on long-horizon reasoning, contact-rich, and multi-object interaction tasks. 
-            Our evaluations show that COLA outperforms current existing methods on these benchmarks and transfers to the real world on 2 different embodiments.
+            Our evaluations show that NARRATE outperforms current existing methods on these benchmarks and transfers to the real world on 2 different embodiments.
           </p>
         </div>
       </div>
@@ -240,7 +240,7 @@
     <!-- Animation. -->
     <div class="rows is-centered ">
       <div class="row is-full-width">
-        <h2 class="title is-3"><span class="dperact">COLA</span></h2>
+        <h2 class="title is-3"><span class="dperact">NARRATE</span></h2>
 
         <!-- Interpolating. -->
         <div class="content has-text-justified">
@@ -266,7 +266,7 @@
       <h2 class="title is-3">Efficiency Evaluation</h2>
       
       <p class="content has-text-justified">
-        We compare COLA against <a href="https://code-as-policies.github.io/">Code as Policies</a>, and <a href="https://voxposer.github.io/">VoxPoser</a>. We find that defining the constrained MPC program leads to 
+        We compare NARRATE against <a href="https://code-as-policies.github.io/">Code as Policies</a>, and <a href="https://voxposer.github.io/">VoxPoser</a>. We find that defining the constrained MPC program leads to 
         the most efficient execution of contact-rich tasks (where the cm-level trajectories of the gripper fingers matter for collision avoidance).
       </p>
       <br>
@@ -306,7 +306,7 @@
       <h2 class="title is-3">Human Feedback at Runtime</h2>
       
       <p class="content has-text-justified">
-        COLA defines each sub-task in natural language. This allows for <b>seamless human intervention</b> in case the subtasks are incorrect. We show that being able to intervene with feedback (on both 1 sub-task, or for every sub-task of the plan) increases the success rate.
+        NARRATE defines each sub-task in natural language. This allows for <b>seamless human intervention</b> in case the subtasks are incorrect. We show that being able to intervene with feedback (on both 1 sub-task, or for every sub-task of the plan) increases the success rate.
       </p>
       <br>
       <div class="column has-text-centered">
@@ -325,7 +325,7 @@
       <h2 class="title is-3">Deployment on a Different Embodiment</h2>
       
       <p class="content has-text-justified">
-        Despite using a Model Predictive Controller (MPC), COLA is <b>immediately deployable on any hardware embodiment</b> as it plans in End Effector space, and uses a point-mass model.
+        Despite using a Model Predictive Controller (MPC), NARRATE is <b>immediately deployable on any hardware embodiment</b> as it plans in End Effector space, and uses a point-mass model.
       </p>
       <div class="column has-text-centered">
         <video id="dist1"

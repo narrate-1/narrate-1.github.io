@@ -132,24 +132,66 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-fullhd">
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns is-vcentered  is-centered">
-          <div class="publication-video" style="scale: 80%;">
-            <iframe src="https://www.youtube.com/embed/8__CQMCkdws?si=U16bDMhXKMCTn_Zb"
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-          </br>
+<section class="section">
+    <div class="container is-max-widescreen">
+      <div class="rows">
+      </div>
+    
+
+      <div class="column has-text-centered">
+                <video id="dist1"
+                  controls
+                  muted
+                  autoplay
+                  loop
+                  width="70%">
+                  <source src="media/videos/main_video_narrate_720_compressed.mp4" 
+                  type="video/mp4">
+                </video>
+      </div>
+
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The impressive capabilities of Large Language
+            Models (LLMs) have led to various efforts in enabling robots
+            to be controlled through natural language instructions, opening
+            exciting possibilities for human-robot interaction. The goal is for
+            the motor-control task to be performed accurately, efficiently
+            and safely while also enjoying the flexibility imparted by
+            LLMs to specify and adjust the task through natural language.
+            In this work, we demonstrate how a careful layering of an
+            LLM in combination with a Model Predictive Control (MPC)
+            formulation allows for accurate and flexible robotic control
+            via natural language while taking into consideration safety
+            constraints. In particular, we rely on the LLM to effectively
+            frame constraints and objective functions as mathematical
+            expressions, which are later used in the motor-control module
+            via MPC. The transparency of the optimization formulation
+            allows for interpretability of the task and enables adjustments
+            through human feedback. We demonstrate the validity of
+            our method through extensive experiments on long-horizon
+            reasoning, contact-rich, and multi-object interaction tasks. Our
+            evaluations show that NARRATE outperforms current existing
+            methods on these benchmarks and effectively transfers to the
+            real world on two different embodiments.
+          </p>
         </div>
-        <br>
-        <h2 class="subtitle has-text-centered">
-        <span class="dperact">NARRATE</span> solves long-horizon contact-rich tasks, generating a sequence of <b>sub-tasks in language space</b>, and formulating for each sub-task an <b>interpretable and safe constrained MPC program</b> to execute the action on the robot.
-        </h2>
       </div>
     </div>
+    <!--/ Abstract. -->
+
   </div>
+
 </section>
 
 
@@ -222,72 +264,26 @@
 </h2>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            The impressive capabilities of Large Language
-            Models (LLMs) have led to various efforts in enabling robots
-            to be controlled through natural language instructions, opening
-            exciting possibilities for human-robot interaction. The goal is for
-            the motor-control task to be performed accurately, efficiently
-            and safely while also enjoying the flexibility imparted by
-            LLMs to specify and adjust the task through natural language.
-            In this work, we demonstrate how a careful layering of an
-            LLM in combination with a Model Predictive Control (MPC)
-            formulation allows for accurate and flexible robotic control
-            via natural language while taking into consideration safety
-            constraints. In particular, we rely on the LLM to effectively
-            frame constraints and objective functions as mathematical
-            expressions, which are later used in the motor-control module
-            via MPC. The transparency of the optimization formulation
-            allows for interpretability of the task and enables adjustments
-            through human feedback. We demonstrate the validity of
-            our method through extensive experiments on long-horizon
-            reasoning, contact-rich, and multi-object interaction tasks. Our
-            evaluations show that NARRATE outperforms current existing
-            methods on these benchmarks and effectively transfers to the
-            real world on two different embodiments.
-          </p>
+
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered  is-centered">
+          <div class="publication-video" style="scale: 80%;">
+            <iframe src="https://www.youtube.com/embed/8__CQMCkdws?si=U16bDMhXKMCTn_Zb"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          </br>
         </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-  </div>
-
-</section>
-
-
-<setcion class="section">
-    <div class="container is-max-widescreen">
-      <div class="rows">
-        <h2 class="title is-3">Human-Robot chat interface</h2>
-        <p class="content has-text-justified">
-          The relatively low inference time required by LLMs and the real-time properties of the MPC regime allow humans to interactively collarborative with NARRATE via an intuitive chat interface.
-        </p>
         <br>
+        <h2 class="subtitle has-text-centered">
+        <span class="dperact">NARRATE</span> solves long-horizon contact-rich tasks, generating a sequence of <b>sub-tasks in language space</b>, and formulating for each sub-task an <b>interpretable and safe constrained MPC program</b> to execute the action on the robot.
+        </h2>
       </div>
-    
-
-      <div class="column has-text-centered">
-                <video id="dist1"
-                  controls
-                  muted
-                  autoplay
-                  loop
-                  width="70%">
-                  <source src="media/videos/ui_clean_plate.mp4" 
-                  type="video/mp4">
-                </video>
-      </div>
-
     </div>
-</setcion>
+  </div>
+</section>
 
   
 
@@ -383,29 +379,31 @@
 </section>
 
 <section class="section">
-  <div class="container is-max-widescreen">
+    <div class="container is-max-widescreen">
+      <div class="rows">
+        <h2 class="title is-3">Human-Robot chat interface</h2>
+        <p class="content has-text-justified">
+          The relatively low inference time required by LLMs and the real-time properties of the MPC regime allow humans to interactively collarborative with NARRATE via an intuitive chat interface.
+        </p>
+        <br>
+      </div>
+    
 
-    <div class="rows">
-      <h2 class="title is-3">Deployment on a Different Embodiment</h2>
-      
-      <p class="content has-text-justified">
-        Despite using a Model Predictive Controller (MPC), NARRATE is <b>immediately deployable on any hardware embodiment</b> as it plans in End Effector space, and uses a point-mass model.
-      </p>
       <div class="column has-text-centered">
-        <video id="dist1"
-          controls
-          muted
-          autoplay
-          loop
-          width="70%">
-          <source src="media/videos/dynaarm-pyramid-8x.mp4" 
-          type="video/mp4">
-        </video>
+                <video id="dist1"
+                  controls
+                  muted
+                  autoplay
+                  loop
+                  width="70%">
+                  <source src="media/videos/ui_clean_plate.mp4" 
+                  type="video/mp4">
+                </video>
       </div>
 
     </div>
-  </div>
 </section>
+
 
 <section class="section">
   <div class="container is-max-widescreen">
